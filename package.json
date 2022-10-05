@@ -11,7 +11,9 @@
     "test": "mocha ./test/*",
     "docker:build": "sudo docker build . -t",
     "heroku:push": "sudo heroku container:push",
-    "heroku:release": "sudo heroku container:release"
+    "heroku:release": "sudo heroku container:release",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "mocha": {
     "require": [
@@ -40,7 +42,8 @@
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
     "helmet": "^3.21.2",
-    "pm2": "^5.0.0"
+    "pm2": "^5.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
@@ -48,5 +51,6 @@
     "mocha": "^6.2.2",
     "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
-  }
+  },
+  "snyk": true
 }
