@@ -1,5 +1,5 @@
 # retrieve base image for Node 12 (use LTS alpines in prod)
-FROM node:lts-alpine
+FROM node:20.14.0-alpine3.20
 
 # set app directory insode container
 WORKDIR /server
